@@ -1,5 +1,4 @@
 // Aşağıdaki görevleri tamamlayın
-
 /*
   GÖREV 1
   - Input:  Bir dosya yolunu (path) parametre olarak alacak bir fonksiyon oluştur.
@@ -16,10 +15,11 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(path) {
+  const dosyaArray = path.split("/");
+  return dosyaArray[dosyaArray.length - 1];
 }
-
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 /*
   GÖREV 2
   - Input:  Bir sayı arrayini parametre olarak alacak bir fonksiyon oluştur.
@@ -38,8 +38,8 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamaBul(sayiArray) {
+  const toplam = 
 }
 
 /*
