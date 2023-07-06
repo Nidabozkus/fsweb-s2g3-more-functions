@@ -68,14 +68,19 @@ function ortalamaBul(sayiArray) {
 */
 
 function ortalamadanBuyukleriBul(sayiArray, fOrtalamaBul) {
-  const buyukler = fOrtalamaBul(sayiArray);
-  const buyukleriBul = buyukler.map((ortalama, index) => {
-    return sayiArray[index] > ortalama;
-  });
-  return buyukleriBul;
+  const ortalamalar = fOrtalamaBul(sayiArray);
+  const buyukler = sayiArray.filter(
+    (buyuk) => buyuk > ortalamalar || buyuk === ortalamalar
+  );
+  return buyukler;
 }
 
-console.log(ortalamadanBuyukleriBul([5, 6], ortalamaBul));
+console.log(
+  ortalamadanBuyukleriBul(
+    [109, 216, 288, 143, 71, 185, -278, 194, 5],
+    ortalamaBul
+  )
+);
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
