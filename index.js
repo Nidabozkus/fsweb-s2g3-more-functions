@@ -39,6 +39,9 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 */
 
 function ortalamaBul(sayiArray) {
+  if (sayiArray.length === 0) {
+    return null;
+  }
   const x = sayiArray.reduce((toplam, sayi) => {
     return toplam + sayi;
   });
@@ -46,7 +49,7 @@ function ortalamaBul(sayiArray) {
   return ort;
 }
 
-//console.log(ortalamaBul());
+console.log(ortalamaBul([109, 216, 288, 143, 71, 185, -278, 194, 5]));
 /*
   GÖREV 3
   - Input:  Bir sayı arrayini ve ortalama bulmaya yarayacak bir fonksiyonu parametre olarak alacak bir fonksiyon oluştur.
@@ -69,6 +72,9 @@ function ortalamaBul(sayiArray) {
 
 function ortalamadanBuyukleriBul(sayiArray, fOrtalamaBul) {
   const ortalamalar = fOrtalamaBul(sayiArray);
+  if (sayiArray.length === 0) {
+    return null;
+  }
   const buyukler = sayiArray.filter(
     (buyuk) => buyuk > ortalamalar || buyuk === ortalamalar
   );
